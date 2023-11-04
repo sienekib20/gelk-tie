@@ -1,10 +1,13 @@
 <?php
+
 namespace gelk\installer;
 
-class Installer {
-    public static function postCreateProject() {
+class Installer
+{
+    public static function postCreateProject()
+    {
         // Diretório do instalador (gelk/tie)
-        $installerDir = __DIR__ . '/../';
+        $installerDir = dirname(__DIR__, 2);
 
         // Diretório do projeto recém-criado (testar)
         $projectDir = getcwd() . '/';
@@ -14,7 +17,8 @@ class Installer {
     }
 
     // Função para copiar arquivos de uma pasta para outra
-    private static function copyFiles($source, $destination) {
+    private static function copyFiles($source, $destination)
+    {
         if (is_dir($source)) {
             @mkdir($destination);
             $directory = dir($source);
