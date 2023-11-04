@@ -1,0 +1,20 @@
+{
+    "name": "gelk/tie",
+    "description": "Instalador de estrutura php",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "gelk\\installer\\": "gelk/installer/"
+        }
+    },
+    "require": {
+        "php": ">=7.3"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "post-create-project-cmd": [
+            "gelk\\installer\\Installer::postCreateProject"
+        ]
+    }
+}
