@@ -13,7 +13,7 @@ class Installer
         $projectDir = getcwd() . '/';
 
         // Copiar arquivos da pasta skeleton para o novo projeto
-        self::copyFiles($installerDir . 'skeleton', $projectDir);
+        self::copyFiles('/skeleton', $projectDir);
     }
 
     // Função para copiar arquivos de uma pasta para outra
